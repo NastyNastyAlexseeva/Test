@@ -1,0 +1,39 @@
+.banner
+    @extends .container
+    flexD(column, flex-start, stretch, nowrap)
+    height 100%
+
+    &__wrapper
+        flex 1 0 auto
+
+    &__title
+        font-style normal
+        font-weight bold
+        font-size 32px
+        color clFontBlack
+
+        &--logo
+            color clFontGreen
+    
+    &__text
+        font-style normal
+        font-weight 300
+        font-size 18px
+        line-height 21px
+        color clFontGray
+    
+    &__button
+        -moz-appearance none
+        -webkit-appearance none
+        border none
+        background greenGradientInvert
+        font-style normal
+        font-weight 500
+        font-size 18px
+        line-height 21px
+        text-align center
+        color clFontWhite
+        width 100%
+        padding 15px
+        display block
+

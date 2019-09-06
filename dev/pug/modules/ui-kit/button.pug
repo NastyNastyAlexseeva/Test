@@ -1,0 +1,7 @@
+mixin button(content,  link)
+    if link == true
+        a.button( href="javascript:void(0);" title=`${content}` )&attributes( attributes ) #{content}
+            block
+    else
+        button.button&attributes( attributes ) #{content}
+            block

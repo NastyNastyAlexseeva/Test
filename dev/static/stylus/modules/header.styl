@@ -1,0 +1,28 @@
+.header
+    @extends .container
+    flexD(row, space-between, flex-start, nowrap)
+    padding-top 16px
+    
+    &__top
+        flexD(column, flex-start, flex-end, wrap)
+    
+    &__title
+        color clFontGreen
+        font-weight bold
+        font-size 30px
+        line-height 35px
+        margin-bottom 9px
+
+    &__map
+        span
+            font-weight normal
+            font-size 14px
+            line-height 16px
+            color clFontGray
+        
+        svg
+            fill clTransparent
+            stroke clFontGray
+            width 29px
+            height 21px
+            stroke-width 10%
