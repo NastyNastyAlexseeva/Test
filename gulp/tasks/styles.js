@@ -9,7 +9,7 @@ module.exports = function () {
             }))
             .pipe($.gp.csscomb())
             .pipe($.gp.csso())
-            .pipe($.gulp.dest('./build/static/css/'))
+            .pipe($.gulp.dest('./docs/static/css/'))
     });
 
     $.gulp.task('styles:dev', () => {
@@ -28,7 +28,7 @@ module.exports = function () {
             .pipe($.gp.autoprefixer({
                 browsers: ['last 3 version']
             }))
-            .pipe($.gulp.dest('./build/static/css/'))
+            .pipe($.gulp.dest('./docs/static/css/'))
             .pipe($.browserSync.reload({
                 stream: true
             }));
