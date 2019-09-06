@@ -1,8 +1,10 @@
 include ui-kit/button
-.banner
-    .banner__wrapper
-        include ui-kit/button
-        h1.banner__title Каршеринг
-        h1.banner__title.banner__title--logo Need for drive
-        span.banner__text Поминутная аренда авто твоего города
-        +button('Забронировать', true).banner__button
+section.banner
+    .container
+        .banner__wrapper
+            include ui-kit/button
+            h1.banner__sub-title Каршеринг
+            h1.banner__title Need for drive
+            div.banner__text
+                p Поминутная аренда авто твоего города
+            +button('Забронировать', true).banner__button

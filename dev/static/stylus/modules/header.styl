@@ -1,28 +1,36 @@
 .header
-    @extends .container
     flexD(row, space-between, flex-start, nowrap)
     padding-top 16px
+    margin-bottom 33px
+
+    @media (min-width: $tablet)
+        position relative
     
     &__top
+        @media (min-width: $tablet)
+            flex 0 0 100%
+
+    &__top-wrapper
         flexD(column, flex-start, flex-end, wrap)
     
     &__title
         color clFontGreen
-        font-weight bold
+        font-weight 700
         font-size 30px
         line-height 35px
         margin-bottom 9px
 
     &__map
+        color clFontGray
         span
-            font-weight normal
+            font-weight 400
             font-size 14px
             line-height 16px
-            color clFontGray
+            color currentColor
         
         svg
-            fill clTransparent
-            stroke clFontGray
+            fill transparent
+            stroke currentColor
             width 29px
             height 21px
             stroke-width 10%

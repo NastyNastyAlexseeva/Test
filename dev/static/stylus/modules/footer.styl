@@ -1,18 +1,38 @@
 .footer
-    background-color clFooter
+    background-color clDark
     box-sizing border-box
-    padding 16px
+    padding 16px 0
+
+    @media (min-width: $tablet)
+        background-color transparent
+
+    &__wrapper
+        flexD(column, flex-start, flex-end, nowrap)
+
+        @media (min-width: $tablet)
+            flexD(row, space-between, flex-start, nowrap)
 
     &__tel
-        font-weight normal
+        display inline-block
+        font-weight 400
         font-size 13px
         line-height 15px
         color clFontGreen
         text-align right
+        letter-spacing -.3px
+        margin-bottom 10px
+
+        @media (min-width: $tablet)
+            order 2
+            color clBlack
     
     &__text
-        font-weight normal
+        font-weight 400
         font-size 13px
         line-height 15px
         color clFontGray
         text-align right 
+        display block
+
+        @media (min-width: $tablet)
+            order 1

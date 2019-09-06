@@ -18,11 +18,12 @@ html(lang="ru-RU")
 		<![endif]-->
 	body(class=pageClass)
 		.page-wrapper
-			.content-wrapper
+			.wrapper
 				include ../modules/header
-				.content
+				main.content
 					block content
 				include ../modules/footer
+			include ../modules/slider
 		script(src="static/js/jquery.js")
 		//- script(src="../../../node_modules/slick-slider/slick/slick.min.js")
 		script(src="static/js/libs.min.js")
