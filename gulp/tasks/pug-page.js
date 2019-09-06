@@ -15,7 +15,6 @@ module.exports = function() {
                 };
             }))
             .pipe($.gulp.dest('./'))
-            // .pipe($.gulp.dest('./build/'))
             .on('end', $.browserSync.reload);
     });
 };
