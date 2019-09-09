@@ -11,6 +11,12 @@ absolute-all(num)
 	right num
 	left num
 
+paddingMenu()
+	padding-left 88px
+
+	@media (min-width: $desktop-min)
+		padding-left 67px
+
 flexD(direction, justifyContent, alignItems, flexWrap)
 	display flex
 	flex-direction direction
@@ -18,11 +24,13 @@ flexD(direction, justifyContent, alignItems, flexWrap)
 	align-items alignItems
 	flex-wrap flexWrap
 
-paddingMenu()
-	padding-left 88px
-
-	@media (min-width: $desktop-min)
-		padding-left 67px
-
-// rem(size)
-// 	return (size/16)rem
+ofi()
+	position absolute
+	left 0
+	top 0
+	bottom 0
+	right 0
+	width 100%
+	height 100%
+	object-fit cover
+	font-family "object-fit: cover;"

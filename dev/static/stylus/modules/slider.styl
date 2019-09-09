@@ -1,8 +1,70 @@
 .slider
-    background gray
     display none
-
-    @media (min-width: $desktop-min)
-        display block
+    height 100%
+    position relative
+    overflow hidden
+    
+    &__list
+        position relative
         min-height 100%
-        flex 1 0 auto
+
+        .slick-list
+            overflow hidden
+            padding 0
+            min-height 100%
+            display flex
+
+        .slick-track
+            display flex
+            min-height 100%
+    
+    &__item
+        min-height 100%
+        width 100%
+        position relative
+        min-height 100%
+        flexD(column, center, stretch, nowrap)
+        display flex !important
+        padding 0 28px
+    
+    &__dots
+        position absolute
+        bottom 0
+    
+    &__image
+        ofi()
+        z-index 50
+    
+    &__info
+        position relative
+        z-index 100
+    
+    &__title
+        font-weight 500
+        font-size 32px
+        line-height 37px
+        color clFontWhite
+        margin-bottom 10px
+    
+    &__text
+        font-weight 300
+        font-size 22px
+        line-height 100%
+        color clFontGray100
+        margin-bottom 30px
+    
+    &__button
+        font-weight 500
+        font-size 18px
+        line-height 21px
+        text-align center
+        color clFontGray100
+        border-radius 4px
+        background greenGradient
+        box-sizing boder-box
+        display inline-block
+        padding 15px
+        min-width 164px
+    
+    @media (min-width: $desktop-min)
+        flexD(column, space-between, stretch, nowrap)

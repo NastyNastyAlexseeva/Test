@@ -1,4 +1,12 @@
-.slider
-    .slider__item hello
-    .slider__item world
-    .slider__item hello
+mixin slider(data)
+    .slider(class!=attributes.class)
+        .slider__list.js-slider
+            each item in data.items
+                .slider__item
+                    img.slider__image(src=item.src, alt='', title='')
+                    .slider__info
+                        .container
+                            h2.slider__title #{item.title}
+                            .slider__text !{item.text}
+                            include ui-kit/button
+                            +button('Подробнее', true).slider__button

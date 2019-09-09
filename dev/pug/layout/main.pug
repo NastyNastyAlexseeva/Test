@@ -12,6 +12,7 @@ html(lang="ru-RU")
 		meta(name="keywords" content="")
 
 		link(rel="stylesheet" type='text/css' href="static/css/main.css")
+		link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
 
 		<!--[if lt IE 9]>
 		script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
@@ -24,13 +25,30 @@ html(lang="ru-RU")
 					block content
 				include ../modules/footer
 			include ../modules/slider
+			+slider({'items':
+                [{	'src': 'static/img/content/1.png',
+					'title': 'Бесплатная парковка',
+					'text': '<p>Оставляйте машину на платных городских парковках и разрешенных местах, не нарушая ПДД, а также в аэропортах.</p>'
+                },
+				{	
+					'src': 'static/img/content/2.png',
+					'title': 'Страховка',
+					'text': '<p>Полная страховка страховка автомобиля</p>'
+                },
+				{
+					'src': 'static/img/content/3.png',
+					'title': 'Бензин',
+					'text': '<p>Полный бак на любой заправке города за наш счёт</p>'
+                },
+				{
+					'src': 'static/img/content/4.png',
+					'title': 'Обслуживание',
+					'text': '<p>Автомобиль проходит еженедельное ТО</p>'
+                },
+            ]})
 		script(src="static/js/jquery.js")
-		//- script(src="../../../node_modules/slick-slider/slick/slick.min.js")
+		script(type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
+		script(src="static/js/slider.js")
 		script(src="static/js/libs.min.js")
 		script(src="static/js/main.js")
-		//- script(src="//code.jquery.com/jquery-1.11.0.min.js")
-		//- script(src="//code.jquery.com/jquery-migrate-1.2.1.min.js")
-		//- script(src="static/js/slick-slider/slick/slick.min.js")
-		
-		//- script(src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
 		block script
