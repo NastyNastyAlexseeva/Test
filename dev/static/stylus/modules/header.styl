@@ -5,6 +5,9 @@
 
     @media (min-width: $tablet)
         position relative
+        padding-top 32px
+        margin-bottom 158px
+        paddingMenu()
     
     &__top
         @media (min-width: $tablet)
@@ -12,6 +15,9 @@
 
     &__top-wrapper
         flexD(column, flex-start, flex-end, wrap)
+
+        @media (min-width: $tablet)
+            flexD(row, space-between, flex-start, wrap)
     
     &__title
         color clFontGreen
@@ -19,14 +25,19 @@
         font-size 30px
         line-height 35px
         margin-bottom 9px
+        word-wrap break-word
 
     &__map
-        color clFontGray
+        color clFontGray500
+        position relative
+        padding-left 29px
+
         span
             font-weight 400
             font-size 14px
             line-height 16px
             color currentColor
+            word-wrap break-word
         
         svg
             fill transparent
@@ -34,3 +45,5 @@
             width 29px
             height 21px
             stroke-width 10%
+            position absolute
+            left 0

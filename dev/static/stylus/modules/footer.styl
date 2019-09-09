@@ -5,12 +5,17 @@
 
     @media (min-width: $tablet)
         background-color transparent
+        padding 0 0 29px
+        paddingMenu()
+    
+    @media (min-width: $desktop-min)
+        padding-bottom 23px
 
     &__wrapper
         flexD(column, flex-start, flex-end, nowrap)
 
         @media (min-width: $tablet)
-            flexD(row, space-between, flex-start, nowrap)
+            flexD(row, space-between, flex-start, wrap)
 
     &__tel
         display inline-block
@@ -21,18 +26,36 @@
         text-align right
         letter-spacing -.3px
         margin-bottom 10px
+        white-space nowrap
+
+        &:hover
+        &:focus
+        &:active
+        &.active
+            color clGray100
+            transition all transitionLink
+        
+        &.disabled
+            color clDisablid
 
         @media (min-width: $tablet)
             order 2
             color clBlack
+
+            &:hover
+            &:focus
+            &:active
+            &.active
+                color clGreen
     
     &__text
         font-weight 400
         font-size 13px
         line-height 15px
-        color clFontGray
+        color clFontGray500
         text-align right 
         display block
+        word-wrap break-word
 
         @media (min-width: $tablet)
             order 1

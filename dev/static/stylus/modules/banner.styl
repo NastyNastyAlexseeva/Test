@@ -2,6 +2,9 @@
     flexD(column, flex-start, stretch, nowrap)
     height 100%
 
+    @media (min-width: $tablet)
+        paddingMenu()
+
     &__wrapper
         flex 1 0 auto
     
@@ -9,20 +12,36 @@
         font-weight 700
         font-size 32px
         color clFontGreen
-        line-height 35px
+        line-height 100%
+        word-wrap break-word
+
+        @media (min-width: $tablet)
+            font-size 70px
 
     &__title
         font-weight 700
         font-size 32px
         color clFontBlack
         margin-bottom 10px
+        word-wrap break-word
+
+        @media (min-width: $tablet)
+            font-size 70px
+            line-height 66px
+            margin-bottom 28px
     
     &__text
         font-weight 300
         font-size 18px
         line-height 21px
-        color clFontGray
+        color clFontGray500
         margin-bottom 31px
+        word-wrap break-word
+
+        @media (min-width: $tablet)
+            font-size 26px
+            line-height 30px
+            margin-bottom 61px
     
     &__button
         -moz-appearance    none
@@ -41,4 +60,27 @@
         padding 15px
         display block
         margin-left -16px
+        word-wrap break-word
+
+        &:hover
+        &:focus
+        &.active
+            filter brightness(.9)
+            transition all transitionButton
+        
+        &:active
+            filter brightness(.8)
+            transition all transitionButton
+        
+        &.disabled
+            background clDisablid
+            
+
+        @media (min-width: $tablet)
+            min-width 250px
+            width auto
+            display inline-block
+            border-radius 8px
+            margin 0
+            line-height 18px
 

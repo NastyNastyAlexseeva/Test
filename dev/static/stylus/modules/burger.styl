@@ -11,9 +11,15 @@
         z-index 25000
         margin-left 0
         width 85px
-        padding-top 22px
-        padding-bottom 35px
+        padding 22px 0 35px
         flexD(column, space-between, stretch, nowrap)
+    
+    @media (min-width: $desktop-min)
+        width 65px
+        padding 20px 0 31px
+    
+    @media (min-width: $desktop)
+        padding-top 24px
 
     &__icon
         height 46px
@@ -27,11 +33,26 @@
         position relative
         top -10px
         cursor pointer
+        color clBlack
+
+        &:hover
+        &:focus
+        &:active
+        &.active
+            color clGreen
+            transition all transitionButton
+        
+        &.disabled
+            color clDisablid
 
         @media (min-width: $tablet)
             padding 0 24px
             width 100%
             position static
+            color #fff
+        
+        @media (min-width: $desktop-min)
+            padding 0 20px
         
         span
             width 21px
@@ -40,24 +61,22 @@
             position relative
             display inline-block
             vertical-align middle
-            background-color clBlack
+            background-color currentColor
 
             @media (min-width: $tablet)
-                background-color #fff
                 width 100%
 
             &:before
             &:after
                 position absolute
                 content ""
-                background-color clBlack
+                background-color currentColor
                 width 21px
                 height 3px
                 border-radius 25%
                 left 0
             
                 @media (min-width: $tablet)
-                    background-color #fff
                     width 100%
         
             &:after
@@ -67,6 +86,17 @@
     
     &__language
         display none
+        word-wrap break-word
+
+        &:hover
+        &:focus
+        &:active
+        &.active
+            color clGray100
+            transition all transitionLink
+        
+        &.disabled
+            color clDisablid
          
         @media (min-width: $tablet)
             display block

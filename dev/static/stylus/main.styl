@@ -67,16 +67,26 @@ button
 
 	@media (min-width: $tablet)
 		padding 0 30px
-		margin-left 88px
+	
+	@media (min-width: $desktop)
+		padding 0 64px
 
 .page-wrapper
 	min-height 100%
 
+	@media (min-width: $desktop-min)
+		flexD(row, flex-start, flex-start, nowrap)
+
+
 .wrapper
-	display flex
-	flex-direction column
-	justify-content space-between
+	flexD(column, space-between, stretch, nowrap)
 	min-height 100%
+
+	@media (min-width: $desktop-min)
+		flex 0 0 60%
+	
+	@media (min-width: $desktop)
+		flex 0 0 52.2%
 
 .content
 	flex 1 0 auto
