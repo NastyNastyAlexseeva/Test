@@ -3,7 +3,8 @@ mixin slider(data)
         .slider__list.js-slider
             each item in data.items
                 .slider__item
-                    img.slider__image(src=item.src, alt='', title='')
+                    .slider__image
+                        img(src=item.src, alt='', title='')
                     .slider__info
                         .container
                             h2.slider__title #{item.title}

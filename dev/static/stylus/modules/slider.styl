@@ -3,6 +3,7 @@
     height 100%
     position relative
     overflow hidden
+    background #000
     
     &__list
         position relative
@@ -23,21 +24,99 @@
         width 100%
         position relative
         min-height 100%
-        flexD(column, center, stretch, nowrap)
-        display flex !important
         padding 0 28px
+
+        &:first-child
+        &:nth-child(1n+5)
+            .slider__button
+                background greenGradient
+        
+        &:nth-child(2n)
+        &:nth-child(2n+4)
+            .slider__button
+                background blueGradient
+        
+        &:nth-child(3n)
+        &:nth-child(3n+4)
+            .slider__button
+                background redGradient
+        
+        &:nth-child(4n+4)
+            .slider__button
+                background purpleGradient
     
     &__dots
         position absolute
-        bottom 0
+        bottom 32px
+        width 100%
+        text-align center
+
+        @media (min-width: $desktop)
+            bottom 27px
+
+        li
+            display inline-block
+            -moz-appearance    none
+            -webkit-appearance none
+            appearance         none
+            width 16px
+            height 16px
+            vertical-align middle
+            padding 4px
+            cursor pointer
+
+            &.slick-active button
+                background clGreen
+            
+            &:hover button
+            &:focus button
+            &.active button
+                background clGreen
+                transition all transitionButton
+            
+            &:active button
+                background clGreen
+                transition all transitionButton
+            
+            &.disabled button
+                background clDisablid
+        
+        button
+            -moz-appearance    none
+            -webkit-appearance none
+            appearance         none
+            width 100%
+            height 100%
+            background #fff
+            border-radius 50%
+            border 0
+            padding 0
+            color #fff
+            font-size 0px
+            display block
     
     &__image
         ofi()
         z-index 50
+        background #000
+
+        img
+           ofi()
+           z-index 10
+        
+        &:before
+            content ""
+            absolute-all(0)
+            background linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%)
+            z-index 15
     
     &__info
         position relative
         z-index 100
+        padding-top 277px
+
+        @media (min-width: $desktop)
+            padding-top 237px
     
     &__title
         font-weight 500
@@ -45,6 +124,10 @@
         line-height 37px
         color clFontWhite
         margin-bottom 10px
+
+        @media (min-width: $desktop)
+            font-size 40px
+            line-height 47px
     
     &__text
         font-weight 300
@@ -52,6 +135,10 @@
         line-height 100%
         color clFontGray100
         margin-bottom 30px
+
+        @media (min-width: $desktop)
+            font-size 24px
+            line-height 90%
     
     &__button
         font-weight 500
@@ -60,11 +147,79 @@
         text-align center
         color clFontGray100
         border-radius 4px
-        background greenGradient
         box-sizing boder-box
         display inline-block
         padding 15px
         min-width 164px
     
+    &__arrow
+        -moz-appearance    none
+        -webkit-appearance none
+        appearance         none
+        border none
+        padding 0
+        position absolute
+        top 0
+        bottom 0
+        min-height 100%
+        width 48px
+        z-index 100
+        cursor pointer
+        background transparent
+
+        @media (min-width: $desktop)
+            width 64px
+
+        &:hover
+        &:focus
+        &.active
+            background clGreenTransparent
+            transition all transitionButton
+        
+        &:active
+            background clGreenTransparent
+            transition all transitionButton
+
+        span
+            display block
+            width 14px
+            height 18px
+            position relative
+            margin auto
+
+            &:before
+            &:after
+                content ""
+                position absolute
+                border-bottom 2px solid clGray100
+                border-radius 4px
+                height 2px
+                width 100%
+                left 0
+
+        &-prev
+            left 0
+
+            span
+                &:before
+                    transform rotate(135deg)
+                    top 0
+                
+                &:after
+                    transform rotate(-135deg)
+                    top 9px
+        
+        &-next
+            right 0
+
+            span
+                &:before
+                    transform rotate(-135deg)
+                    top 0
+                
+                &:after
+                    transform rotate(135deg)
+                    top 9px
+
     @media (min-width: $desktop-min)
         flexD(column, space-between, stretch, nowrap)
