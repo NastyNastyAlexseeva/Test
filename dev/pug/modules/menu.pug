@@ -1,0 +1,13 @@
+mixin menu(...items)
+    include social
+    .menu(class!=attributes.class)
+        .menu__wrapper
+            button.menu__close(onclick="burger()")
+            .menu__content
+                nav.menu__nav
+                    ul.menu__list
+                        each item in items
+                            li.menu__item
+                                a(href='javascript:void(0);' title="") !{item}
+                +social('telegram', 'facebook', 'instagram')
+            
