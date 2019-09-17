@@ -13,6 +13,19 @@
         width 85px
         padding 22px 0 20px
         flexD(column, space-between, stretch, nowrap)
+
+        &.open
+            background-color clMenuBkgr
+
+            .burger__language
+                display none
+
+            .burger__icon
+                width 48px
+                padding 0
+                margin 0 10px
+                span
+                    width 25px
     
     @media (min-width: $desktop-min)
         width 65px
@@ -24,9 +37,7 @@
     &__icon
         height 46px
         width 46px
-        -moz-appearance    none
-        -webkit-appearance none
-        appearance         none
+        display block
         border none
         background-color transparent
         padding 3px 5px 0 2px
@@ -34,6 +45,7 @@
         top -10px
         cursor pointer
         color clBlack
+        z-index 250000
 
         &:hover
         &:focus
@@ -83,10 +95,43 @@
                 top 8px
             &:before
                 bottom 8px
+
+    &__close
+        span
+            background-color transparent
+            color transparent
+            transition all .2s
+
+            &:before
+            &:after
+                color clWhite
+            
+            &:before
+                bottom 0
+                transform rotate(-45deg)
+                transition transform transitionButton cubic-bezier(0.55, 0.055, 0.675, 0.19),
+                            bottom .1s 
+            
+            &:after
+                top 0
+                transform rotate(45deg)
+                transition transform transitionButton cubic-bezier(0.55, 0.055, 0.675, 0.19),
+                            top .1s 
     
     &__language
         display none
         word-wrap break-word
+        min-height 48px
+        -moz-appearance    none
+        -webkit-appearance none
+        appearance         none
+        border none
+        background-color transparent
+        font-weight 700
+        font-size 13px
+        line-height 15px
+        color clGreen
+        text-shadow 0px 4px 4px rgba(0, 0, 0, 0.25)
 
         &:hover
         &:focus
@@ -100,14 +145,11 @@
          
         @media (min-width: $tablet)
             display block
-            min-height 48px
-            -moz-appearance    none
-            -webkit-appearance none
-            appearance         none
-            border none
-            background-color transparent
-            font-weight 700
-            font-size 13px
-            line-height 15px
-            color clGreen
-            text-shadow 0px 4px 4px rgba(0, 0, 0, 0.25)
+        
+        &--menu
+            display block
+            flex 0 0 auto
+            margin-bottom 10px
+
+            @media (min-width: $tablet)
+                display none

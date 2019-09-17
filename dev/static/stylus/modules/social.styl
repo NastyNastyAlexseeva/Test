@@ -1,0 +1,30 @@
+.social
+    &__list
+        padding 0
+        flexD(row, flex-start, center, nowrap)
+
+        li
+            margin-right 25px
+
+            &:last-child
+                margin-right 0px
+    
+    &__link
+        display block
+        width 32px
+        height 32px
+
+        &:hover svg
+        &:focus svg
+        &:active svg
+        &.active svg
+            fill clGreen
+            transition all transitionLink
+        
+        &.disabled svg
+            fill clDisablid
+
+        svg
+            fill white
+            width 100%
+            height 100%

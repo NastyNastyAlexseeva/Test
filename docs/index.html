@@ -23,9 +23,9 @@
           <div class="header__top">
             <div class="container">
               <div class="header__top-wrapper"><a class="header__title" href="#" title="">Need for drive</a><a class="header__map" href="#" title="">
-                          <svg class="icon icon-map ">
-                            <use xlink:href="static/img/svg/symbol/sprite.svg#map"></use>
-                          </svg><span>Ульяновск</span></a></div>
+                            <svg class="icon icon-map ">
+                              <use xlink:href="static/img/svg/symbol/sprite.svg#map"></use>
+                            </svg><span>Ульяновск</span></a></div>
             </div>
           </div>
         </header>
@@ -88,9 +88,8 @@
                 </div>
               </div>
             </div>
-            <div class="menu">
+            <div class="menu" id="menu">
               <div class="menu__wrapper">
-                <button class="menu__close" onclick="burger()"></button>
                 <div class="menu__content">
                   <nav class="menu__nav">
                     <ul class="menu__list">
@@ -117,13 +116,16 @@
                           </ul>
                         </div>
                 </div>
+                      <button class="button burger__language burger__language--menu">Eng
+                      </button>
               </div>
             </div>
     </div>
     <script src="static/js/jquery.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="static/js/slider.js"></script>
     <script src="static/js/libs.min.js"></script>
+    <script src="static/js/menu.js"></script>
     <script src="static/js/main.js"></script>
   </body>
 </html>

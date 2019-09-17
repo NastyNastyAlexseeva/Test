@@ -1,8 +1,8 @@
 mixin menu(...items)
     include social
-    .menu(class!=attributes.class)
+    include ui-kit/button
+    .menu(id="menu")
         .menu__wrapper
-            button.menu__close(onclick="burger()")
             .menu__content
                 nav.menu__nav
                     ul.menu__list
@@ -10,4 +10,5 @@ mixin menu(...items)
                             li.menu__item
                                 a(href='javascript:void(0);' title="") !{item}
                 +social('telegram', 'facebook', 'instagram')
+            +button("Eng", false).burger__language.burger__language--menu
             
