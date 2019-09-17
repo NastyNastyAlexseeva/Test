@@ -30,20 +30,60 @@
         &:nth-child(1n+5)
             .slider__button
                 background greenGradient
+
+                &:hover
+                &.active
+                    background greenGradientHover
+                    transition background transitionButton
+                
+                &:active
+                &:focus
+                    background greenGradientActive
+                    transition background transitionButton
         
         &:nth-child(2n)
         &:nth-child(2n+4)
             .slider__button
                 background blueGradient
+
+                &:hover
+                &.active
+                    background blueGradientHover
+                    transition background transitionButton
+                
+                &:active
+                &:focus
+                    background blueGradientActive
+                    transition background transitionButton
         
         &:nth-child(3n)
         &:nth-child(3n+4)
             .slider__button
                 background redGradient
+
+                &:hover
+                &.active
+                    background redGradientHover
+                    transition background transitionButton
+                
+                &:active
+                &:focus
+                    background redGradientActive
+                    transition background transitionButton
         
         &:nth-child(4n+4)
             .slider__button
                 background purpleGradient
+
+                &:hover
+                &.active
+                    background purpleGradientHover
+                    transition background transitionButton
+                
+                &:active
+                &:focus
+                    background purpleGradientActive
+                    transition background transitionButton
     
     &__dots
         position absolute
@@ -151,6 +191,11 @@
         display inline-block
         padding 15px
         min-width 164px
+        position relative
+        transition background transitionButton
+        
+        &.disabled
+            background clDisablid
     
     &__arrow
         -moz-appearance    none

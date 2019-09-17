@@ -61,16 +61,14 @@
         display block
         margin-left -16px
         word-wrap break-word
+        transition background 1s ease-in
 
         &:hover
-        &:focus
         &.active
-            filter brightness(.9)
-            transition all transitionButton
+            background greenGradientInvertHover
         
         &:active
-            filter brightness(.8)
-            transition all transitionButton
+           background greenGradientInvertActive
         
         &.disabled
             background clDisablid
