@@ -75,6 +75,7 @@
             color #fff
             font-size 0px
             display block
+            cursor pointer
     
     &__image
         ofi()
@@ -94,10 +95,8 @@
     &__info
         position relative
         z-index 100
-        padding-top 277px
-
-        @media (min-width: $desktop)
-            padding-top 237px
+        flexD(column, center, stretch, nowrap)
+        min-height 100%
     
     &__title
         font-weight 500

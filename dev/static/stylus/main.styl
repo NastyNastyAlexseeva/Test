@@ -10,14 +10,11 @@ html
 	background-color clBackground
 
 body
-	font-family "roboto"
+	font-family "roboto", sans-serif
 	font-style normal
 	background-color clBackground
-	display flex
+	flexD(column, space-between, stretch, nowrap)
 	min-height 100%
-	flex-direction column
-	justify-content space-between
-	align-items stretch
 	min-width 320px
 	width 100%
 
@@ -83,23 +80,31 @@ section
 	width 100%
 
 	@media (min-width: $desktop-min)
-		flex 0 0 60%
+		flex-grow 0
+        flex-shrink 0
+        flex-basis 60%
 	
 	@media (min-width: $desktop)
-		flex 0 0 52.2%
+		flex-grow 0
+        flex-shrink 0
+        flex-basis 52.2%
+
+.header
+.footer 
+	flex-grow 0
+	flex-shrink 0
+	flex-basis auto
 
 .content
-	flex 1 1 auto
 	height 100%
 	padding 20px 0
+	flex-grow 1
+    flex-shrink 1
+    flex-basis auto
 
 	@media (min-width: $tablet)
 		padding-top 126px
 		padding-bottom 40px
-
-.header
-.footer 
-	flex 0 0 auto
 
 //Модули
 @import "modules/modules.styl"
