@@ -1,0 +1,262 @@
+.button
+    &--banner
+        -moz-appearance    none
+        -webkit-appearance none
+        appearance         none
+
+        border none
+        background greenGradientInvert
+        font-weight 500
+        font-size 18px
+        line-height 21px
+        text-align center
+        color clFontWhite
+        min-width 320px
+        width 100vw
+        padding 15px
+        display block
+        margin-left -16px
+        word-wrap break-word
+        transition background 1s ease-in
+
+        &:hover
+        &.active
+            background greenGradientInvertHover
+        
+        &:active
+           background greenGradientInvertActive
+        
+        &.disabled
+            background clDisablid
+            
+
+        @media (min-width: $tablet)
+            min-width 250px
+            width auto
+            display inline-block
+            border-radius 8px
+            margin 0
+            line-height 18px
+
+    &--burger-icon
+        height 46px
+        width 46px
+        display block
+        border none
+        background-color transparent
+        padding 3px 5px
+        position relative
+        top -10px
+        cursor pointer
+        color clBlack
+        z-index 250000
+
+        &:hover
+        &:focus
+        &:active
+        &.active
+            color clGreen
+            transition all transitionButton
+        
+        &.disabled
+            color clDisablid
+
+        @media (min-width: $tablet)
+            padding 0 8px
+            width 100%
+            position static
+            color #fff
+        
+        @media (min-width: $desktop-min)
+            padding 0 10px
+        
+        span
+            width 21px
+            height 3px
+            border-radius 25%
+            position relative
+            display inline-block
+            vertical-align middle
+            background-color currentColor
+
+            @media (min-width: $tablet)
+                width 100%
+
+            &:before
+            &:after
+                position absolute
+                content ""
+                background-color currentColor
+                width 21px
+                height 3px
+                border-radius 25%
+                left 0
+            
+                @media (min-width: $tablet)
+                    width 100%
+        
+            &:after
+                top 8px
+            &:before
+                bottom 8px
+    
+    &--burger-close
+        span
+            background-color transparent
+            color transparent
+            transition all .2s
+
+            &:before
+            &:after
+                color clWhite
+            
+            &:before
+                bottom 0
+                transform rotate(-45deg)
+                transition transform transitionButton cubic-bezier(0.55, 0.055, 0.675, 0.19),
+                            bottom .1s 
+            
+            &:after
+                top 0
+                transform rotate(45deg)
+                transition transform transitionButton cubic-bezier(0.55, 0.055, 0.675, 0.19),
+                            top .1s
+    
+    &--burger-language
+        display none
+        word-wrap break-word
+        min-height 48px
+        -moz-appearance    none
+        -webkit-appearance none
+        appearance         none
+        border none
+        background-color transparent
+        font-weight 700
+        font-size 13px
+        line-height 15px
+        color clGreen
+        text-shadow 0px 4px 4px rgba(0, 0, 0, 0.25)
+        cursor pointer
+        padding 0
+
+        &:hover
+        &:focus
+        &:active
+        &.active
+            color clGray100
+            transition all transitionLink
+        
+        &.disabled
+            color clDisablid
+         
+        @media (min-width: $tablet)
+            display block
+    
+    &--language-menu
+        display block
+        word-wrap break-word
+        min-height 48px
+        -moz-appearance    none
+        -webkit-appearance none
+        appearance         none
+        border none
+        background-color transparent
+        font-weight 700
+        font-size 13px
+        line-height 15px
+        color clGreen
+        text-shadow 0px 4px 4px rgba(0, 0, 0, 0.25)
+        cursor pointer
+        padding 0
+        flex 0 0 auto
+        margin-bottom 10px
+
+        &:hover
+        &:focus
+        &:active
+        &.active
+            color clGray100
+            transition all transitionLink
+        
+        &.disabled
+            color clDisablid
+         
+        @media (min-width: $tablet)
+            display none
+    
+    &--slider
+        font-weight 500
+        font-size 18px
+        line-height 21px
+        text-align center
+        color clFontGray100
+        border-radius 4px
+        box-sizing boder-box
+        display inline-block
+        padding 15px
+        min-width 164px
+        position relative
+        transition background transitionButton
+        
+        &.disabled
+            background clDisablid
+
+.slider__item
+    &:first-child
+    &:nth-child(1n+5)
+        .button--slider
+            background greenGradient
+
+            &:hover
+            &.active
+                background greenGradientHover
+                transition background transitionButton
+            
+            &:active
+            &:focus
+                background greenGradientActive
+                transition background transitionButton
+    
+    &:nth-child(2n)
+    &:nth-child(2n+4)
+        .button--slider
+            background blueGradient
+
+            &:hover
+            &.active
+                background blueGradientHover
+                transition background transitionButton
+            
+            &:active
+            &:focus
+                background blueGradientActive
+                transition background transitionButton
+    
+    &:nth-child(3n)
+    &:nth-child(3n+4)
+        .button--slider
+            background redGradient
+
+            &:hover
+            &.active
+                background redGradientHover
+                transition background transitionButton
+            
+            &:active
+            &:focus
+                background redGradientActive
+                transition background transitionButton
+    
+    &:nth-child(4n+4)
+        .button--slider
+            background purpleGradient
+
+            &:hover
+            &.active
+                background purpleGradientHover
+                transition background transitionButton
+            
+            &:active
+            &:focus
+                background purpleGradientActive
+                transition background transitionButton

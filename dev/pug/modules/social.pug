@@ -4,5 +4,5 @@ mixin social(...items)
         ul.social__list
             each item in items
                 li
-                    a.social__link(href='javascript:void(0);' title="")
-                        +icon(item).social__icon
+                    a.social__link(href='javascript:void(0);' title=item)
+                        +icon(item).icon--social

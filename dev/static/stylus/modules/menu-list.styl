@@ -1,0 +1,28 @@
+.menu-list
+    margin-bottom 38px
+    
+    &__item
+        margin-bottom 15px
+
+        &:last-child
+            margin-bottom 0
+        a
+            font-weight 500
+            font-size 22px
+            line-height 26px
+            color clFontWhite
+            text-transform uppercase
+
+            &:hover
+            &:focus
+            &:active
+            &.active
+                color clGreen
+                transition all transitionLink
+            
+            &.disabled
+                color clDisablid
+            
+            @media (min-width: $tablet)
+                font-size 28px
+                line-height 33px

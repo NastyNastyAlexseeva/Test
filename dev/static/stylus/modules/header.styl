@@ -32,18 +32,19 @@
         position relative
         padding-left 29px
 
+        &:hover
+        &:focus
+        &:active
+        &.active
+            color clFontBlack
+            transition all transitionLink
+        
+        &.disabled
+            color clDisablid
+
         span
             font-weight 400
             font-size 14px
             line-height 16px
             color currentColor
             word-wrap break-word
-        
-        svg
-            fill transparent
-            stroke currentColor
-            width 29px
-            height 21px
-            stroke-width 10%
-            position absolute
-            left 0

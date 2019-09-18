@@ -1,18 +1,23 @@
 .menu
     display none
     absolute-all(0)
-    z-index -100
+    z-index 2500
     min-height 100%
     width 100%
     opacity 0
+    left -100%
     transition all transitionLink
     background clTransparentBkgr
+    visibility hidden
+
+    @media (min-width: $desktop-min)
+        left 0
     
     &.open
         display block
-        z-index 2500
         opacity 1
-        transition all transitionLink
+        left 0
+        visibility visible
 
     &__wrapper
         background clMenuBkgr
@@ -26,10 +31,10 @@
             flexD(column, center, flex-start, nowrap)
         
         @media (min-width: $desktop-min)
-            width 60vw
+            width 60%
         
         @media (min-width: $desktop)
-            width 53vw
+            width 52.2%
     
     &__content
         padding-top 80px
@@ -38,35 +43,3 @@
         @media (min-width: $tablet)
             flex 0 0 auto
             padding-top 0
-    
-    &__nav
-        margin-bottom 38px
-    
-    &__list
-        padding 0
-    
-    &__item
-        margin-bottom 15px
-
-        &:last-child
-            margin-bottom 0
-        a
-            font-weight 500
-            font-size 22px
-            line-height 26px
-            color clFontWhite
-            text-transform uppercase
-
-            &:hover
-            &:focus
-            &:active
-            &.active
-                color clGreen
-                transition all transitionLink
-            
-            &.disabled
-                color clDisablid
-            
-            @media (min-width: $tablet)
-                font-size 28px
-                line-height 33px

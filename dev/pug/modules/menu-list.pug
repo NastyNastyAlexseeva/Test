@@ -1,0 +1,5 @@
+mixin menu-list(...items)
+    nav.menu-list
+        each item in items
+            .menu-list__item
+                a(href='javascript:void(0);' title="") !{item}

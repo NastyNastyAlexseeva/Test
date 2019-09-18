@@ -1,9 +1,9 @@
 section.banner
+    include ui-kit/button
     .container
         .banner__wrapper
-            include ui-kit/button
             h1.banner__sub-title Каршеринг
             h1.banner__title Need for drive
             div.banner__text
                 p Поминутная аренда авто твоего города
-            +button('Забронировать', true).banner__button
+            +button('Забронировать', true).button--banner(title="Забронировать сейчас")

@@ -1,14 +1,10 @@
 mixin menu(...items)
     include social
+    include menu-list
     include ui-kit/button
     .menu(id="menu")
         .menu__wrapper
             .menu__content
-                nav.menu__nav
-                    ul.menu__list
-                        each item in items
-                            li.menu__item
-                                a(href='javascript:void(0);' title="") !{item}
+                +menu-list('Парковка', 'Страховка', 'Бензин', 'Обслуживание')
                 +social('telegram', 'facebook', 'instagram')
-            +button("Eng", false).burger__language.burger__language--menu
-            
+            +button("Eng", false).button--language-menu(title="Выбрать язык")    
